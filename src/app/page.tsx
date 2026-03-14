@@ -4,7 +4,6 @@ import OurStory from '@/components/sections/OurStory';
 import Delivery from '@/components/sections/Delivery';
 import NeighborhoodPatrons from '@/components/sections/NeighborhoodPatrons';
 import ProductsShowcase from '@/components/sections/ProductsShowcase';
-import CallToAction from '@/components/sections/CallToAction';
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Delivery />
       <NeighborhoodPatrons />
       <ProductsShowcase />
-      <CallToAction />
     </>
   );
 }

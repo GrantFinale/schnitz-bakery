@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Knead Us Section */}
         <div className="text-center">
-          <h2 className="mb-8 text-3xl font-bold tracking-widest text-white sm:text-4xl">
-            KNEAD US?
+          <h2 className="mb-8 text-3xl tracking-widest text-white sm:text-4xl">
+            Knead Us?
           </h2>
 
           <div className="mb-10 space-y-2 text-sm leading-relaxed text-[#E5E5E5] sm:text-base">

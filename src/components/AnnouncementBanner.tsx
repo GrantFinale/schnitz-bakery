@@ -2,64 +2,14 @@
 
 import { useState, useEffect } from 'react';
 
-function getNextDeadline(): Date {
-  const now = new Date();
-  const deadline = new Date();
-
-  // Set to today at 12:00 PM EST (17:00 UTC)
-  deadline.setUTCHours(17, 0, 0, 0);
-
-  // If we've already passed today's deadline, move to next weekday
-  if (now >= deadline) {
-    deadline.setDate(deadline.getDate() + 1);
-  }
-
-  // Skip weekends (Saturday=6, Sunday=0)
-  const day = deadline.getDay();
-  if (day === 6) deadline.setDate(deadline.getDate() + 2);
-  if (day === 0) deadline.setDate(deadline.getDate() + 1);
-
-  return deadline;
-}
-
-function formatTimeLeft(ms: number): string {
-  if (ms <= 0) return 'Deadline passed!';
-
-  const hours = Math.floor(ms / (1000 * 60 * 60));
-  const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((ms % (1000 * 60)) / 1000);
-
-  const parts: string[] = [];
-  if (hours > 0) parts.push(`${hours}h`);
-  if (minutes > 0) parts.push(`${minutes}m`);
-  parts.push(`${seconds}s`);
-
-  return parts.join(' ');
-}
-
 export default function AnnouncementBanner() {
   const [dismissed, setDismissed] = useState(true); // Start hidden to prevent flash
-  const [timeLeft, setTimeLeft] = useState('');
 
   useEffect(() => {
     // Check sessionStorage after mount
     const wasDismissed = sessionStorage.getItem('announcement-dismissed');
     setDismissed(wasDismissed === 'true');
   }, []);
-
-  useEffect(() => {
-    if (dismissed) return;
-
-    const update = () => {
-      const deadline = getNextDeadline();
-      const ms = deadline.getTime() - Date.now();
-      setTimeLeft(formatTimeLeft(ms));
-    };
-
-    update();
-    const interval = setInterval(update, 1000);
-    return () => clearInterval(interval);
-  }, [dismissed]);
 
   const handleDismiss = () => {
     setDismissed(true);
@@ -69,18 +19,19 @@ export default function AnnouncementBanner() {
   if (dismissed) return null;
 
   return (
-    <div className="relative bg-black/80 border-b border-[#ED1C24]/30 px-4 py-3 text-center">
-      <div className="mx-auto max-w-4xl">
-        <p className="text-sm font-bold uppercase tracking-widest text-[#ED1C24] sm:text-base">
+    <div className="relative bg-black/80 border-b border-[#DF3131]/30 px-4 py-8 text-center">
+      <div className="mx-auto max-w-4xl font-mono">
+        <p className="text-3xl font-bold uppercase tracking-widest text-[#DF3131] sm:text-4xl">
           New Order Deadline
         </p>
-        <p className="mt-1 text-xs text-[#E5E5E5] sm:text-sm">
-          Place your order by{' '}
-          <span className="font-semibold text-white">12:00 PM EST</span> for
-          next-day delivery.{' '}
-          <span className="inline-block font-mono text-[#ED1C24]">
-            {timeLeft}
-          </span>
+        <p className="mt-3 text-2xl text-[#DF3131] sm:text-3xl">
+          Beginning 3/7/26 order cutoff will be 12PM for next day deliveries.
+        </p>
+        <p className="mt-4 text-base text-[#DF3131]/80 sm:text-lg">
+          Thanks for understanding and your continued support.
+        </p>
+        <p className="mt-2 text-base text-[#DF3131]/80 sm:text-lg">
+          Get ready for our new ordering page! Lots of exciting features are on the way!
         </p>
       </div>
 

@@ -14,7 +14,7 @@ export default function ProductsShowcase() {
     <section className="px-4 py-20 md:py-32">
       <ScrollFadeIn>
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-16 text-center text-3xl font-bold tracking-widest text-white md:text-4xl">
+          <h2 className="mb-16 text-center text-3xl tracking-widest text-white md:text-4xl">
             Pre-sliced To Serve Easy
           </h2>
           <div className="flex flex-col items-center gap-12 md:flex-row md:items-center md:gap-16">

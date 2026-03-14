@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
   --color-primary-bg: #000000;
@@ -7,7 +8,11 @@
   --color-body-text: #E5E5E5;
   --color-form-bg: #E5E5E5;
   --color-warm-accent: #B99867;
-  --font-stack: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-nav: 'Courier New', 'Courier', monospace;
+  --font-button: 'Open Sans', sans-serif;
+  --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @theme inline {
@@ -22,10 +27,8 @@
 body {
   background-color: #000000;
   background-image: url('/backgrounds/bread-pattern-texture.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: 400px 400px;
   color: var(--color-primary-text);
   font-family: var(--font-stack);
   min-height: 100vh;
@@ -38,8 +41,8 @@ html {
 
 /* Headings style */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-weight: 400;
   letter-spacing: 0.05em;
 }
 

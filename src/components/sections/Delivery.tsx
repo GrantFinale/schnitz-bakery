@@ -16,7 +16,7 @@ export default function Delivery() {
     <section className="px-4 py-20 md:py-32">
       <ScrollFadeIn>
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="mb-12 text-3xl font-bold tracking-widest text-white md:text-4xl">
+          <h2 className="mb-12 text-3xl tracking-widest text-white md:text-4xl">
             We Rise Early To Deliver Daily
           </h2>
           <div className="mx-auto mb-16 max-w-2xl">

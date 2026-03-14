@@ -24,7 +24,7 @@ export default function ClientLogos() {
   return (
     <section className="px-4 py-20 md:py-32">
       <ScrollFadeIn>
-        <h2 className="mb-16 text-center text-3xl font-bold tracking-widest text-white md:text-4xl">
+        <h2 className="mb-16 text-center text-3xl tracking-widest text-white md:text-4xl">
           Enjoy Our Bread On These Menus
         </h2>
         <div className="mx-auto grid max-w-6xl grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">

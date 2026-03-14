@@ -5,7 +5,7 @@ export default function CallToAction() {
     <section className="px-4 py-20 md:py-32">
       <ScrollFadeIn>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-3xl font-bold tracking-widest text-white md:text-5xl">
+          <h2 className="mb-6 text-3xl tracking-widest text-white md:text-5xl">
             Ready to Order?
           </h2>
           <p className="mb-10 text-lg text-[#E5E5E5]">

@@ -5,7 +5,7 @@ export default function OurStory() {
     <section className="px-4 py-20 md:py-32">
       <ScrollFadeIn>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-10 text-3xl font-bold tracking-widest text-white md:text-4xl">
+          <h2 className="mb-10 text-3xl tracking-widest text-white md:text-4xl">
             Our Story
           </h2>
           <p className="text-lg leading-relaxed text-[#E5E5E5] md:text-xl md:leading-relaxed">

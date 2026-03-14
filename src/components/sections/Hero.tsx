@@ -13,7 +13,7 @@ export default function Hero() {
           priority
         />
       </div>
-      <h1 className="animate-fade-in-up mt-8 text-center font-serif text-5xl font-bold tracking-wide text-white md:text-7xl [animation-delay:200ms]">
+      <h1 className="animate-fade-in-up mt-8 text-center text-5xl tracking-wide text-white md:text-7xl [animation-delay:200ms]">
         Schnitz Bakes So Kitchens Cook
       </h1>
     </section>

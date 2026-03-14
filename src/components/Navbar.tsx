@@ -7,8 +7,8 @@ import Link from 'next/link';
 const navLinks = [
   { label: 'OUR STORY', href: '/' },
   { label: 'GET OUR BREAD', href: '/get-our-bread' },
-  { label: 'ORDER ONLINE', href: 'https://shop.schnitzbakery.com', external: true },
-  { label: 'WHOLESALE', href: '/wholesale' },
+  { label: 'ALL PRODUCTS', href: 'https://shop.schnitzbakery.com', external: true },
+  { label: 'FAVORITES', href: '/favorites' },
 ];
 
 export default function Navbar() {
@@ -66,7 +66,7 @@ export default function Navbar() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-bold tracking-widest text-white/80 transition-colors hover:text-white"
+                  className="font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -74,22 +74,20 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-bold tracking-widest text-white/80 transition-colors hover:text-white"
+                  className="font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
               )
             )}
 
-            {/* Shop Button */}
-            <a
-              href="https://shop.schnitzbakery.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 rounded bg-[#ED1C24] px-5 py-2 text-sm font-bold tracking-widest text-white transition-colors hover:bg-[#d4181f]"
+            {/* Log In Link */}
+            <Link
+              href="/login"
+              className="ml-2 font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
             >
-              SHOP
-            </a>
+              Log In
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -140,7 +138,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
-                  className="border-b border-white/10 py-4 text-sm font-bold tracking-widest text-white/80 transition-colors hover:text-white"
+                  className="border-b border-white/10 py-4 font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -149,22 +147,20 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="border-b border-white/10 py-4 text-sm font-bold tracking-widest text-white/80 transition-colors hover:text-white"
+                  className="border-b border-white/10 py-4 font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
               )
             )}
 
-            <a
-              href="https://shop.schnitzbakery.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/login"
               onClick={() => setMobileOpen(false)}
-              className="mt-6 rounded bg-[#ED1C24] px-5 py-3 text-center text-sm font-bold tracking-widest text-white transition-colors hover:bg-[#d4181f]"
+              className="mt-6 py-4 font-mono text-sm tracking-widest text-white/80 transition-colors hover:text-white"
             >
-              SHOP
-            </a>
+              Log In
+            </Link>
           </div>
         </div>
       </div>
