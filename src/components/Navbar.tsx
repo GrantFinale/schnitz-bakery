@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const navLinks = [
@@ -44,21 +43,9 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logos/SCHNITZ-LOGO-TYPE-WHITE.png"
-              alt="Schnitz Bakery"
-              width={160}
-              height={48}
-              className="h-10 w-auto sm:h-12"
-              priority
-            />
-          </Link>
-
+        <div className="flex h-14 items-center justify-center">
           {/* Desktop Nav Links */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) =>
               link.external ? (
                 <a
@@ -117,7 +104,7 @@ export default function Navbar() {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed inset-0 top-20 z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 top-14 z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
