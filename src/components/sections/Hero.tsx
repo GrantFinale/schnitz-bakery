@@ -3,13 +3,13 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center px-4">
-      <div className="animate-fade-in-up mx-auto w-full max-w-3xl">
+      <div className="animate-fade-in-up mx-auto w-full max-w-5xl">
         <Image
           src="/photos/hero-bread-pile.png"
           alt="Schnitz Bakery artisan bread assortment"
-          width={900}
-          height={600}
-          className="h-auto w-full"
+          width={1200}
+          height={800}
+          className="h-auto w-full object-contain"
           priority
         />
       </div>
