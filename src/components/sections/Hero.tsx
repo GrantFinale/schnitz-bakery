@@ -7,8 +7,8 @@ export default function Hero() {
         <Image
           src="/photos/hero-bread-pile.png"
           alt="Schnitz Bakery artisan bread assortment"
-          width={1200}
-          height={800}
+          width={2500}
+          height={1037}
           className="h-auto w-full object-contain"
           priority
         />
