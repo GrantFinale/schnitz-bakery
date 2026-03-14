@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center pt-16 px-0">
+    <section className="flex flex-col items-center px-0">
       <div className="animate-fade-in-up w-full">
         <Image
           src="/photos/hero-bread-pile.png"

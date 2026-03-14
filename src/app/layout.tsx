@@ -45,9 +45,11 @@ export default function RootLayout({
         <StructuredData
           breadcrumbs={[{ name: 'Home', href: '/' }]}
         />
-        <AnnouncementBanner />
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <div className="pt-14">
+          <AnnouncementBanner />
+          <main className="min-h-screen">{children}</main>
+        </div>
         <Footer />
       </body>
     </html>
